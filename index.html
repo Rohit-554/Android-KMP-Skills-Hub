@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Android Skills Hub — SKILL.md repository directory</title>
-  <meta name="description" content="A curated directory of Android and Kotlin AI agent skills (SKILL.md repositories). Browse official Google and JetBrains skills alongside community contributions." />
+  <meta name="description"
+    content="A curated directory of Android and Kotlin AI agent skills (SKILL.md repositories). Browse official Google and JetBrains skills alongside community contributions." />
   <meta property="og:title" content="Android Skills Hub" />
   <meta property="og:description" content="A curated directory of Android and Kotlin AI agent skill repositories." />
   <meta property="og:type" content="website" />
@@ -12,30 +14,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:           #0e0e10;
-      --surface:      #18181b;
-      --border:       #2a2a2e;
-      --text:         #e4e4e7;
-      --muted:        #71717a;
-      --official:     #7F77DD;
-      --community:    #1D9E75;
-      --arch:         #d07c3a;
-      --compose:      #e05c5c;
-      --kmp:          #4fa3d4;
-      --hub:          #9b72cb;
-      --tag-bg:       #27272a;
-      --tag-text:     #a1a1aa;
-      --star-color:   #e6a817;
-      --radius-sm:    4px;
-      --radius-md:    8px;
-      --radius-lg:    12px;
-      --radius-pill:  999px;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --bg: #0e0e10;
+      --surface: #18181b;
+      --border: #2a2a2e;
+      --text: #e4e4e7;
+      --muted: #71717a;
+      --official: #7F77DD;
+      --community: #1D9E75;
+      --arch: #d07c3a;
+      --compose: #e05c5c;
+      --kmp: #4fa3d4;
+      --hub: #9b72cb;
+      --tag-bg: #27272a;
+      --tag-text: #a1a1aa;
+      --star-color: #e6a817;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-pill: 999px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--bg);
@@ -46,7 +56,10 @@
       min-height: 100vh;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     /* ─── HEADER ─────────────────────────────────────────────── */
     header {
@@ -99,8 +112,14 @@
       transition: color 0.15s, border-color 0.15s;
     }
 
-    .github-link:hover { color: var(--text); border-color: var(--muted); }
-    .github-link svg { flex-shrink: 0; }
+    .github-link:hover {
+      color: var(--text);
+      border-color: var(--muted);
+    }
+
+    .github-link svg {
+      flex-shrink: 0;
+    }
 
     /* ─── MAIN CONTENT ───────────────────────────────────────── */
     main {
@@ -193,7 +212,10 @@
       white-space: nowrap;
     }
 
-    .chip:hover { color: var(--text); border-color: var(--muted); }
+    .chip:hover {
+      color: var(--text);
+      border-color: var(--muted);
+    }
 
     .chip.active {
       background: var(--official);
@@ -220,7 +242,10 @@
       flex-shrink: 0;
     }
 
-    .sort-btn:hover { color: var(--text); border-color: var(--muted); }
+    .sort-btn:hover {
+      color: var(--text);
+      border-color: var(--muted);
+    }
 
     .sort-btn.active {
       border-color: var(--star-color);
@@ -233,7 +258,9 @@
     }
 
     /* ─── SECTION ────────────────────────────────────────────── */
-    .section { margin-top: 40px; }
+    .section {
+      margin-top: 40px;
+    }
 
     .section-header {
       display: flex;
@@ -283,7 +310,9 @@
       transition: border-color 0.15s;
     }
 
-    .card:hover { border-color: var(--muted); }
+    .card:hover {
+      border-color: var(--muted);
+    }
 
     .card-top {
       display: flex;
@@ -311,15 +340,28 @@
       flex-shrink: 0;
     }
 
-    .star-count.loaded { color: var(--tag-text); }
+    .star-count.loaded {
+      color: var(--tag-text);
+    }
 
     /* shimmer for loading state */
     @keyframes shimmer {
-      0%   { opacity: 0.3; }
-      50%  { opacity: 0.8; }
-      100% { opacity: 0.3; }
+      0% {
+        opacity: 0.3;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
+
+      100% {
+        opacity: 0.3;
+      }
     }
-    .star-count.loading { animation: shimmer 1.4s ease-in-out infinite; }
+
+    .star-count.loading {
+      animation: shimmer 1.4s ease-in-out infinite;
+    }
 
     /* ─── BADGE ──────────────────────────────────────────────── */
     .badge {
@@ -334,12 +376,41 @@
       flex-shrink: 0;
     }
 
-    .badge-official    { background: color-mix(in srgb, var(--official) 15%, transparent); color: var(--official); border: 1px solid color-mix(in srgb, var(--official) 30%, transparent); }
-    .badge-architecture { background: color-mix(in srgb, var(--arch) 15%, transparent);   color: var(--arch);     border: 1px solid color-mix(in srgb, var(--arch) 30%, transparent); }
-    .badge-compose     { background: color-mix(in srgb, var(--compose) 15%, transparent); color: var(--compose);  border: 1px solid color-mix(in srgb, var(--compose) 30%, transparent); }
-    .badge-kmp         { background: color-mix(in srgb, var(--kmp) 15%, transparent);     color: var(--kmp);      border: 1px solid color-mix(in srgb, var(--kmp) 30%, transparent); }
-    .badge-hub         { background: color-mix(in srgb, var(--hub) 15%, transparent);     color: var(--hub);      border: 1px solid color-mix(in srgb, var(--hub) 30%, transparent); }
-    .badge-compose-kmp { background: color-mix(in srgb, var(--compose) 12%, transparent); color: var(--compose);  border: 1px solid color-mix(in srgb, var(--compose) 25%, transparent); }
+    .badge-official {
+      background: color-mix(in srgb, var(--official) 15%, transparent);
+      color: var(--official);
+      border: 1px solid color-mix(in srgb, var(--official) 30%, transparent);
+    }
+
+    .badge-architecture {
+      background: color-mix(in srgb, var(--arch) 15%, transparent);
+      color: var(--arch);
+      border: 1px solid color-mix(in srgb, var(--arch) 30%, transparent);
+    }
+
+    .badge-compose {
+      background: color-mix(in srgb, var(--compose) 15%, transparent);
+      color: var(--compose);
+      border: 1px solid color-mix(in srgb, var(--compose) 30%, transparent);
+    }
+
+    .badge-kmp {
+      background: color-mix(in srgb, var(--kmp) 15%, transparent);
+      color: var(--kmp);
+      border: 1px solid color-mix(in srgb, var(--kmp) 30%, transparent);
+    }
+
+    .badge-hub {
+      background: color-mix(in srgb, var(--hub) 15%, transparent);
+      color: var(--hub);
+      border: 1px solid color-mix(in srgb, var(--hub) 30%, transparent);
+    }
+
+    .badge-compose-kmp {
+      background: color-mix(in srgb, var(--compose) 12%, transparent);
+      color: var(--compose);
+      border: 1px solid color-mix(in srgb, var(--compose) 25%, transparent);
+    }
 
     /* ─── REPO NAME ──────────────────────────────────────────── */
     .repo-name {
@@ -396,10 +467,14 @@
       gap: 4px;
     }
 
-    .view-link:hover { color: #a49fe8; }
+    .view-link:hover {
+      color: #a49fe8;
+    }
 
     /* ─── HIDDEN ─────────────────────────────────────────────── */
-    .hidden { display: none !important; }
+    .hidden {
+      display: none !important;
+    }
 
     /* ─── FOOTER ─────────────────────────────────────────────── */
     footer {
@@ -429,661 +504,750 @@
       transition: color 0.15s, border-color 0.15s;
     }
 
-    .footer-text a:hover { color: var(--text); border-color: var(--muted); }
+    .footer-text a:hover {
+      color: var(--text);
+      border-color: var(--muted);
+    }
 
     /* ─── RESPONSIVE ─────────────────────────────────────────── */
     @media (max-width: 600px) {
-      .cards-grid { grid-template-columns: 1fr; }
-      .hero { padding: 36px 0 28px; }
-      .header-inner { padding: 0 16px; }
-      main { padding: 0 16px 48px; }
-      .toolbar { flex-direction: column; align-items: flex-start; }
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 36px 0 28px;
+      }
+
+      .header-inner {
+        padding: 0 16px;
+      }
+
+      main {
+        padding: 0 16px 48px;
+      }
+
+      .toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- ─── HEADER ─────────────────────────────────────────────────── -->
-<header>
-  <div class="header-inner">
-    <div class="site-name">
-      <span class="site-name-dot" aria-hidden="true"></span>
-      Android Skills Hub
-    </div>
-    <a
-      id="header-github-link"
-      class="github-link"
-      href="https://github.com/Rohit-554/Android-KMP-Skills-Hub"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="View on GitHub"
-    >
-      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
-      </svg>
-      GitHub
-    </a>
-  </div>
-</header>
-
-<!-- ─── MAIN ───────────────────────────────────────────────────── -->
-<main>
-
-  <!-- HERO -->
-  <section class="hero" aria-labelledby="site-heading">
-    <p class="hero-eyebrow">SKILL.md · Open Standard</p>
-    <h1 id="site-heading">Android Skills Hub</h1>
-    <p class="hero-desc">
-      A curated directory of AI agent skill repositories for Android &amp; Kotlin — official and community-built.
-    </p>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num" id="total-count">18</span>
-        <span>repositories</span>
+  <!-- ─── HEADER ─────────────────────────────────────────────────── -->
+  <header>
+    <div class="header-inner">
+      <div class="site-name">
+        <span class="site-name-dot" aria-hidden="true"></span>
+        Android Skills Hub
       </div>
-      <div class="stat">
-        <span class="stat-num">3</span>
-        <span>official</span>
+      <a id="header-github-link" class="github-link" href="https://github.com/Rohit-554/Android-KMP-Skills-Hub"
+        target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <!-- ─── MAIN ───────────────────────────────────────────────────── -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="site-heading">
+      <p class="hero-eyebrow">SKILL.md · Open Standard</p>
+      <h1 id="site-heading">Android Skills Hub</h1>
+      <p class="hero-desc">
+        A curated directory of AI agent skill repositories for Android &amp; Kotlin — official and community-built.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="total-count">18</span>
+          <span>repositories</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span>official</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">15</span>
+          <span>community</span>
+        </div>
       </div>
-      <div class="stat">
-        <span class="stat-num">15</span>
-        <span>community</span>
+    </section>
+
+    <!-- TOOLBAR: filter chips + sort -->
+    <div class="toolbar">
+      <nav class="filters" aria-label="Filter skills by category">
+        <button class="chip active" data-filter="all" id="filter-all">All</button>
+        <button class="chip" data-filter="official" id="filter-official">Official</button>
+        <button class="chip" data-filter="architecture" id="filter-architecture">Architecture</button>
+        <button class="chip" data-filter="compose" id="filter-compose">Compose / UI</button>
+        <button class="chip" data-filter="kmp" id="filter-kmp">KMP / CMP</button>
+        <button class="chip" data-filter="hub" id="filter-hub">Discovery Hubs</button>
+      </nav>
+
+      <button class="sort-btn" id="sort-stars-btn" aria-pressed="false" title="Sort visible cards by star count">
+        <span class="star-icon" aria-hidden="true">★</span>
+        Sort by Stars
+      </button>
+    </div>
+
+    <!-- ── OFFICIAL SECTION ──────────────────────────────────────── -->
+    <section class="section" id="section-official" aria-labelledby="section-official-title">
+      <div class="section-header">
+        <h2 class="section-title" id="section-official-title">Official</h2>
+        <div class="section-line" aria-hidden="true"></div>
+        <span class="section-count" id="count-official">3</span>
       </div>
+      <div class="cards-grid" id="grid-official">
+
+        <!-- android/skills -->
+        <article class="card" data-category="official" data-repo="android/skills" aria-label="android/skills">
+          <div class="card-top">
+            <span class="badge badge-official">Official</span>
+            <span class="star-count loading" id="stars-android-skills" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">android/skills</p>
+          <p class="card-desc">Google's official Android AI skills — AGP upgrade, Compose migration, Navigation 3, R8,
+            Edge-to-edge.</p>
+          <div class="tags">
+            <span class="tag">AGP</span>
+            <span class="tag">Compose</span>
+            <span class="tag">Navigation3</span>
+            <span class="tag">R8</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/android/skills" target="_blank" rel="noopener noreferrer"
+              aria-label="View android/skills on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Kotlin/kotlin-agent-skills -->
+        <article class="card" data-category="official" data-repo="Kotlin/kotlin-agent-skills"
+          aria-label="Kotlin/kotlin-agent-skills">
+          <div class="card-top">
+            <span class="badge badge-official">Official</span>
+            <span class="star-count loading" id="stars-kotlin-agent" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">Kotlin/kotlin-agent-skills</p>
+          <p class="card-desc">JetBrains official Kotlin skills for backend and tooling.</p>
+          <div class="tags">
+            <span class="tag">Backend</span>
+            <span class="tag">Tooling</span>
+            <span class="tag">Ktor</span>
+            <span class="tag">Gradle</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/Kotlin/kotlin-agent-skills" target="_blank"
+              rel="noopener noreferrer" aria-label="View Kotlin/kotlin-agent-skills on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- VoltAgent/awesome-design-md (Official) -->
+        <article class="card" data-category="official" data-repo="VoltAgent/awesome-design-md"
+          aria-label="VoltAgent/awesome-design-md">
+          <div class="card-top">
+            <span class="badge badge-official">Official</span>
+            <span class="star-count loading" id="stars-voltagent" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">VoltAgent/awesome-design-md</p>
+          <p class="card-desc">Design-focused skills collection.</p>
+          <div class="tags">
+            <span class="tag">Design</span>
+            <span class="tag">UI</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/VoltAgent/awesome-design-md" target="_blank"
+              rel="noopener noreferrer" aria-label="View VoltAgent/awesome-design-md on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+      </div><!-- /grid-official -->
+    </section>
+
+    <!-- ── COMMUNITY SECTION ─────────────────────────────────────── -->
+    <section class="section" id="section-community" aria-labelledby="section-community-title">
+      <div class="section-header">
+        <h2 class="section-title" id="section-community-title">Community</h2>
+        <div class="section-line" aria-hidden="true"></div>
+        <span class="section-count" id="count-community">15</span>
+      </div>
+      <div class="cards-grid" id="grid-community">
+
+        <!-- ── Compose/UI (moved from Official) ── -->
+        <!-- hamen/material-3-skill -->
+        <article class="card" data-category="compose" data-repo="hamen/material-3-skill"
+          aria-label="hamen/material-3-skill">
+          <div class="card-top">
+            <span class="badge badge-compose">Compose / UI</span>
+            <span class="star-count loading" id="stars-hamen-m3" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">hamen/material-3-skill</p>
+          <p class="card-desc">Material 3 design system — components, theming, tokens, adaptive layouts.</p>
+          <div class="tags">
+            <span class="tag">Material3</span>
+            <span class="tag">Theming</span>
+            <span class="tag">Adaptive</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/hamen/material-3-skill" target="_blank"
+              rel="noopener noreferrer" aria-label="View hamen/material-3-skill on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ── Architecture ── -->
+        <!-- new-silvermoon/awesome-android-agent-skills -->
+        <article class="card" data-category="architecture" data-repo="new-silvermoon/awesome-android-agent-skills"
+          aria-label="new-silvermoon/awesome-android-agent-skills">
+          <div class="card-top">
+            <span class="badge badge-architecture">Architecture</span>
+            <span class="star-count loading" id="stars-newsilvermoon" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">new-silvermoon/awesome-android-agent-skills</p>
+          <p class="card-desc">Large skill set: Clean Arch, ViewModel/StateFlow, XML→Compose, RxJava→Flow, Gradle perf.
+          </p>
+          <div class="tags">
+            <span class="tag">CleanArch</span>
+            <span class="tag">MVVM</span>
+            <span class="tag">Hilt</span>
+            <span class="tag">Room</span>
+            <span class="tag">RxJava→Flow</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/new-silvermoon/awesome-android-agent-skills" target="_blank"
+              rel="noopener noreferrer" aria-label="View new-silvermoon/awesome-android-agent-skills on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- gecko23/android-agent-skills -->
+        <article class="card" data-category="architecture" data-repo="gecko23/android-agent-skills"
+          aria-label="gecko23/android-agent-skills">
+          <div class="card-top">
+            <span class="badge badge-architecture">Architecture</span>
+            <span class="star-count loading" id="stars-gecko23" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">gecko23/android-agent-skills</p>
+          <p class="card-desc">Same architecture stack + Coil image loading skill.</p>
+          <div class="tags">
+            <span class="tag">CleanArch</span>
+            <span class="tag">Coil</span>
+            <span class="tag">Compose</span>
+            <span class="tag">Gradle</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/gecko23/android-agent-skills" target="_blank"
+              rel="noopener noreferrer" aria-label="View gecko23/android-agent-skills on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Drjacky/claude-android-ninja -->
+        <article class="card" data-category="architecture" data-repo="Drjacky/claude-android-ninja"
+          aria-label="Drjacky/claude-android-ninja">
+          <div class="card-top">
+            <span class="badge badge-architecture">Architecture</span>
+            <span class="star-count loading" id="stars-drjacky" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">Drjacky/claude-android-ninja</p>
+          <p class="card-desc">Navigation 3, Gradle convention plugins, Material 3 adaptive UI.</p>
+          <div class="tags">
+            <span class="tag">Navigation3</span>
+            <span class="tag">GradleConvention</span>
+            <span class="tag">Adaptive</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/Drjacky/claude-android-ninja" target="_blank"
+              rel="noopener noreferrer" aria-label="View Drjacky/claude-android-ninja on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- dpconde/claude-android-skill -->
+        <article class="card" data-category="architecture" data-repo="dpconde/claude-android-skill"
+          aria-label="dpconde/claude-android-skill">
+          <div class="card-top">
+            <span class="badge badge-architecture">Architecture</span>
+            <span class="star-count loading" id="stars-dpconde" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">dpconde/claude-android-skill</p>
+          <p class="card-desc">Offline-first architecture: UI/Domain/Data layers, modularization, testing.</p>
+          <div class="tags">
+            <span class="tag">Offline-first</span>
+            <span class="tag">UDF</span>
+            <span class="tag">Flow</span>
+            <span class="tag">Testing</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/dpconde/claude-android-skill" target="_blank"
+              rel="noopener noreferrer" aria-label="View dpconde/claude-android-skill on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ── Compose/UI ── -->
+        <!-- aldefy/compose-skill -->
+        <article class="card" data-category="compose" data-repo="aldefy/compose-skill"
+          aria-label="aldefy/compose-skill">
+          <div class="card-top">
+            <span class="badge badge-compose">Compose / UI</span>
+            <span class="star-count loading" id="stars-aldefy" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">aldefy/compose-skill</p>
+          <p class="card-desc">Deep Compose skill with 18 reference docs + androidx source code.</p>
+          <div class="tags">
+            <span class="tag">State</span>
+            <span class="tag">Performance</span>
+            <span class="tag">Animation</span>
+            <span class="tag">TV</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/aldefy/compose-skill" target="_blank"
+              rel="noopener noreferrer" aria-label="View aldefy/compose-skill on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Meet-Miyani/compose-skill -->
+        <article class="card" data-category="compose" data-repo="Meet-Miyani/compose-skill"
+          aria-label="Meet-Miyani/compose-skill">
+          <div class="card-top">
+            <span class="badge badge-compose-kmp">Compose / UI + KMP</span>
+            <span class="star-count loading" id="stars-meetmiyani" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">Meet-Miyani/compose-skill</p>
+          <p class="card-desc">Full-stack Compose + KMP — MVI, Navigation 3, Ktor, Room, DataStore, Paging 3.</p>
+          <div class="tags">
+            <span class="tag">MVI</span>
+            <span class="tag">Ktor</span>
+            <span class="tag">DataStore</span>
+            <span class="tag">Paging3</span>
+            <span class="tag">SKIE</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/Meet-Miyani/compose-skill" target="_blank"
+              rel="noopener noreferrer" aria-label="View Meet-Miyani/compose-skill on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ── KMP/CMP ── -->
+        <!-- ethanzhongch/Agent-Skills -->
+        <article class="card" data-category="kmp" data-repo="ethanzhongch/Agent-Skills"
+          aria-label="ethanzhongch/Agent-Skills">
+          <div class="card-top">
+            <span class="badge badge-kmp">KMP / CMP</span>
+            <span class="star-count loading" id="stars-ethan" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">ethanzhongch/Agent-Skills</p>
+          <p class="card-desc">KMP Evolution Suite — MVI scaffolding, dependency init, quality standards.</p>
+          <div class="tags">
+            <span class="tag">KMP</span>
+            <span class="tag">MVI</span>
+            <span class="tag">Koin</span>
+            <span class="tag">Ktor</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/ethanzhongch/Agent-Skills" target="_blank"
+              rel="noopener noreferrer" aria-label="View ethanzhongch/Agent-Skills on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ahmed3elshaer/everything-claude-code-mobile -->
+        <article class="card" data-category="kmp" data-repo="ahmed3elshaer/everything-claude-code-mobile"
+          aria-label="ahmed3elshaer/everything-claude-code-mobile">
+          <div class="card-top">
+            <span class="badge badge-kmp">KMP / CMP</span>
+            <span class="star-count loading" id="stars-ahmed" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">ahmed3elshaer/everything-claude-code-mobile</p>
+          <p class="card-desc">KMP navigation: Voyager, Decompose, Compose Nav + SwiftUI bridges.</p>
+          <div class="tags">
+            <span class="tag">Navigation</span>
+            <span class="tag">Voyager</span>
+            <span class="tag">Decompose</span>
+            <span class="tag">SwiftUI</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/ahmed3elshaer/everything-claude-code-mobile" target="_blank"
+              rel="noopener noreferrer" aria-label="View ahmed3elshaer/everything-claude-code-mobile on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- jeffallan/claude-skills -->
+        <article class="card" data-category="kmp" data-repo="jeffallan/claude-skills"
+          aria-label="jeffallan/claude-skills">
+          <div class="card-top">
+            <span class="badge badge-kmp">KMP / CMP</span>
+            <span class="star-count loading" id="stars-jeffallan" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">jeffallan/claude-skills</p>
+          <p class="card-desc">Kotlin specialist — coroutines, Flow, KMP, Ktor, StateFlow/SharedFlow.</p>
+          <div class="tags">
+            <span class="tag">Coroutines</span>
+            <span class="tag">Flow</span>
+            <span class="tag">KMP</span>
+            <span class="tag">Ktor</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/jeffallan/claude-skills" target="_blank"
+              rel="noopener noreferrer" aria-label="View jeffallan/claude-skills on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ── Discovery Hubs ── -->
+        <!-- skillmatic-ai/awesome-agent-skills -->
+        <article class="card" data-category="hub" data-repo="skillmatic-ai/awesome-agent-skills"
+          aria-label="skillmatic-ai/awesome-agent-skills">
+          <div class="card-top">
+            <span class="badge badge-hub">Hub</span>
+            <span class="star-count loading" id="stars-skillmatic" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">skillmatic-ai/awesome-agent-skills</p>
+          <p class="card-desc">Curated list of all agent skills, 44k+ indexed, security scanning.</p>
+          <div class="tags">
+            <span class="tag">Directory</span>
+            <span class="tag">Awesome list</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/skillmatic-ai/awesome-agent-skills" target="_blank"
+              rel="noopener noreferrer" aria-label="View skillmatic-ai/awesome-agent-skills on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- heilcheng/awesome-agent-skills -->
+        <article class="card" data-category="hub" data-repo="heilcheng/awesome-agent-skills"
+          aria-label="heilcheng/awesome-agent-skills">
+          <div class="card-top">
+            <span class="badge badge-hub">Hub</span>
+            <span class="star-count loading" id="stars-heilcheng" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">heilcheng/awesome-agent-skills</p>
+          <p class="card-desc">Beginner-friendly awesome list with npx skills CLI and leaderboard.</p>
+          <div class="tags">
+            <span class="tag">Awesome list</span>
+            <span class="tag">CLI</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/heilcheng/awesome-agent-skills" target="_blank"
+              rel="noopener noreferrer" aria-label="View heilcheng/awesome-agent-skills on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+
+
+      </div><!-- /grid-community -->
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-text">
+        Made with <span aria-label="love" style="color:#e05c5c;">♥</span> by
+        <a href="https://github.com/Rohit-554" target="_blank" rel="noopener noreferrer">Jadu</a>
+      </p>
+      <a class="footer-text" href="https://github.com/Rohit-554/Android-KMP-Skills-Hub" target="_blank"
+        rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;"
+        aria-label="View source on GitHub">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path
+            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+        </svg>
+        Rohit-554/Android-KMP-Skills-Hub
+      </a>
     </div>
-  </section>
+  </footer>
 
-  <!-- TOOLBAR: filter chips + sort -->
-  <div class="toolbar">
-    <nav class="filters" aria-label="Filter skills by category">
-      <button class="chip active" data-filter="all"          id="filter-all">All</button>
-      <button class="chip"        data-filter="official"     id="filter-official">Official</button>
-      <button class="chip"        data-filter="architecture" id="filter-architecture">Architecture</button>
-      <button class="chip"        data-filter="compose"      id="filter-compose">Compose / UI</button>
-      <button class="chip"        data-filter="kmp"          id="filter-kmp">KMP / CMP</button>
-      <button class="chip"        data-filter="hub"          id="filter-hub">Discovery Hubs</button>
-    </nav>
+  <!-- ─── SCRIPT ──────────────────────────────────────────────────── -->
+  <script>
+    (function () {
+      'use strict';
 
-    <button class="sort-btn" id="sort-stars-btn" aria-pressed="false" title="Sort visible cards by star count">
-      <span class="star-icon" aria-hidden="true">★</span>
-      Sort by Stars
-    </button>
-  </div>
+      /* ── State ──────────────────────────────────────────────────── */
+      let currentFilter = 'all';
+      let sortByStars = false;
 
-  <!-- ── OFFICIAL SECTION ──────────────────────────────────────── -->
-  <section class="section" id="section-official" aria-labelledby="section-official-title">
-    <div class="section-header">
-      <h2 class="section-title" id="section-official-title">Official</h2>
-      <div class="section-line" aria-hidden="true"></div>
-      <span class="section-count" id="count-official">3</span>
-    </div>
-    <div class="cards-grid" id="grid-official">
+      /* ── DOM refs ───────────────────────────────────────────────── */
+      const chips = document.querySelectorAll('.chip');
+      const allCards = Array.from(document.querySelectorAll('.card'));
+      const sortBtn = document.getElementById('sort-stars-btn');
+      const secOfficial = document.getElementById('section-official');
+      const secCommunity = document.getElementById('section-community');
+      const cntOfficial = document.getElementById('count-official');
+      const cntCommunity = document.getElementById('count-community');
+      const gridOfficial = document.getElementById('grid-official');
+      const gridCommunity = document.getElementById('grid-community');
 
-      <!-- android/skills -->
-      <article class="card" data-category="official" data-repo="android/skills" aria-label="android/skills">
-        <div class="card-top">
-          <span class="badge badge-official">Official</span>
-          <span class="star-count loading" id="stars-android-skills" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">android/skills</p>
-        <p class="card-desc">Google's official Android AI skills — AGP upgrade, Compose migration, Navigation 3, R8, Edge-to-edge.</p>
-        <div class="tags">
-          <span class="tag">AGP</span>
-          <span class="tag">Compose</span>
-          <span class="tag">Navigation3</span>
-          <span class="tag">R8</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/android/skills" target="_blank" rel="noopener noreferrer" aria-label="View android/skills on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- Kotlin/kotlin-agent-skills -->
-      <article class="card" data-category="official" data-repo="Kotlin/kotlin-agent-skills" aria-label="Kotlin/kotlin-agent-skills">
-        <div class="card-top">
-          <span class="badge badge-official">Official</span>
-          <span class="star-count loading" id="stars-kotlin-agent" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">Kotlin/kotlin-agent-skills</p>
-        <p class="card-desc">JetBrains official Kotlin skills for backend and tooling.</p>
-        <div class="tags">
-          <span class="tag">Backend</span>
-          <span class="tag">Tooling</span>
-          <span class="tag">Ktor</span>
-          <span class="tag">Gradle</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/Kotlin/kotlin-agent-skills" target="_blank" rel="noopener noreferrer" aria-label="View Kotlin/kotlin-agent-skills on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- VoltAgent/awesome-design-md (Official) -->
-      <article class="card" data-category="official" data-repo="VoltAgent/awesome-design-md" aria-label="VoltAgent/awesome-design-md">
-        <div class="card-top">
-          <span class="badge badge-official">Official</span>
-          <span class="star-count loading" id="stars-voltagent" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">VoltAgent/awesome-design-md</p>
-        <p class="card-desc">Design-focused skills collection.</p>
-        <div class="tags">
-          <span class="tag">Design</span>
-          <span class="tag">UI</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/VoltAgent/awesome-design-md" target="_blank" rel="noopener noreferrer" aria-label="View VoltAgent/awesome-design-md on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-    </div><!-- /grid-official -->
-  </section>
-
-  <!-- ── COMMUNITY SECTION ─────────────────────────────────────── -->
-  <section class="section" id="section-community" aria-labelledby="section-community-title">
-    <div class="section-header">
-      <h2 class="section-title" id="section-community-title">Community</h2>
-      <div class="section-line" aria-hidden="true"></div>
-      <span class="section-count" id="count-community">15</span>
-    </div>
-    <div class="cards-grid" id="grid-community">
-
-      <!-- ── Compose/UI (moved from Official) ── -->
-      <!-- hamen/material-3-skill -->
-      <article class="card" data-category="compose" data-repo="hamen/material-3-skill" aria-label="hamen/material-3-skill">
-        <div class="card-top">
-          <span class="badge badge-compose">Compose / UI</span>
-          <span class="star-count loading" id="stars-hamen-m3" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">hamen/material-3-skill</p>
-        <p class="card-desc">Material 3 design system — components, theming, tokens, adaptive layouts.</p>
-        <div class="tags">
-          <span class="tag">Material3</span>
-          <span class="tag">Theming</span>
-          <span class="tag">Adaptive</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/hamen/material-3-skill" target="_blank" rel="noopener noreferrer" aria-label="View hamen/material-3-skill on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- ── Architecture ── -->
-      <!-- new-silvermoon/awesome-android-agent-skills -->
-      <article class="card" data-category="architecture" data-repo="new-silvermoon/awesome-android-agent-skills" aria-label="new-silvermoon/awesome-android-agent-skills">
-        <div class="card-top">
-          <span class="badge badge-architecture">Architecture</span>
-          <span class="star-count loading" id="stars-newsilvermoon" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">new-silvermoon/awesome-android-agent-skills</p>
-        <p class="card-desc">Large skill set: Clean Arch, ViewModel/StateFlow, XML→Compose, RxJava→Flow, Gradle perf.</p>
-        <div class="tags">
-          <span class="tag">CleanArch</span>
-          <span class="tag">MVVM</span>
-          <span class="tag">Hilt</span>
-          <span class="tag">Room</span>
-          <span class="tag">RxJava→Flow</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/new-silvermoon/awesome-android-agent-skills" target="_blank" rel="noopener noreferrer" aria-label="View new-silvermoon/awesome-android-agent-skills on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- gecko23/android-agent-skills -->
-      <article class="card" data-category="architecture" data-repo="gecko23/android-agent-skills" aria-label="gecko23/android-agent-skills">
-        <div class="card-top">
-          <span class="badge badge-architecture">Architecture</span>
-          <span class="star-count loading" id="stars-gecko23" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">gecko23/android-agent-skills</p>
-        <p class="card-desc">Same architecture stack + Coil image loading skill.</p>
-        <div class="tags">
-          <span class="tag">CleanArch</span>
-          <span class="tag">Coil</span>
-          <span class="tag">Compose</span>
-          <span class="tag">Gradle</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/gecko23/android-agent-skills" target="_blank" rel="noopener noreferrer" aria-label="View gecko23/android-agent-skills on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- Drjacky/claude-android-ninja -->
-      <article class="card" data-category="architecture" data-repo="Drjacky/claude-android-ninja" aria-label="Drjacky/claude-android-ninja">
-        <div class="card-top">
-          <span class="badge badge-architecture">Architecture</span>
-          <span class="star-count loading" id="stars-drjacky" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">Drjacky/claude-android-ninja</p>
-        <p class="card-desc">Navigation 3, Gradle convention plugins, Material 3 adaptive UI.</p>
-        <div class="tags">
-          <span class="tag">Navigation3</span>
-          <span class="tag">GradleConvention</span>
-          <span class="tag">Adaptive</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/Drjacky/claude-android-ninja" target="_blank" rel="noopener noreferrer" aria-label="View Drjacky/claude-android-ninja on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- dpconde/claude-android-skill -->
-      <article class="card" data-category="architecture" data-repo="dpconde/claude-android-skill" aria-label="dpconde/claude-android-skill">
-        <div class="card-top">
-          <span class="badge badge-architecture">Architecture</span>
-          <span class="star-count loading" id="stars-dpconde" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">dpconde/claude-android-skill</p>
-        <p class="card-desc">Offline-first architecture: UI/Domain/Data layers, modularization, testing.</p>
-        <div class="tags">
-          <span class="tag">Offline-first</span>
-          <span class="tag">UDF</span>
-          <span class="tag">Flow</span>
-          <span class="tag">Testing</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/dpconde/claude-android-skill" target="_blank" rel="noopener noreferrer" aria-label="View dpconde/claude-android-skill on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- ── Compose/UI ── -->
-      <!-- aldefy/compose-skill -->
-      <article class="card" data-category="compose" data-repo="aldefy/compose-skill" aria-label="aldefy/compose-skill">
-        <div class="card-top">
-          <span class="badge badge-compose">Compose / UI</span>
-          <span class="star-count loading" id="stars-aldefy" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">aldefy/compose-skill</p>
-        <p class="card-desc">Deep Compose skill with 18 reference docs + androidx source code.</p>
-        <div class="tags">
-          <span class="tag">State</span>
-          <span class="tag">Performance</span>
-          <span class="tag">Animation</span>
-          <span class="tag">TV</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/aldefy/compose-skill" target="_blank" rel="noopener noreferrer" aria-label="View aldefy/compose-skill on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- Meet-Miyani/compose-skill -->
-      <article class="card" data-category="compose" data-repo="Meet-Miyani/compose-skill" aria-label="Meet-Miyani/compose-skill">
-        <div class="card-top">
-          <span class="badge badge-compose-kmp">Compose / UI + KMP</span>
-          <span class="star-count loading" id="stars-meetmiyani" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">Meet-Miyani/compose-skill</p>
-        <p class="card-desc">Full-stack Compose + KMP — MVI, Navigation 3, Ktor, Room, DataStore, Paging 3.</p>
-        <div class="tags">
-          <span class="tag">MVI</span>
-          <span class="tag">Ktor</span>
-          <span class="tag">DataStore</span>
-          <span class="tag">Paging3</span>
-          <span class="tag">SKIE</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/Meet-Miyani/compose-skill" target="_blank" rel="noopener noreferrer" aria-label="View Meet-Miyani/compose-skill on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- ── KMP/CMP ── -->
-      <!-- ethanzhongch/Agent-Skills -->
-      <article class="card" data-category="kmp" data-repo="ethanzhongch/Agent-Skills" aria-label="ethanzhongch/Agent-Skills">
-        <div class="card-top">
-          <span class="badge badge-kmp">KMP / CMP</span>
-          <span class="star-count loading" id="stars-ethan" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">ethanzhongch/Agent-Skills</p>
-        <p class="card-desc">KMP Evolution Suite — MVI scaffolding, dependency init, quality standards.</p>
-        <div class="tags">
-          <span class="tag">KMP</span>
-          <span class="tag">MVI</span>
-          <span class="tag">Koin</span>
-          <span class="tag">Ktor</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/ethanzhongch/Agent-Skills" target="_blank" rel="noopener noreferrer" aria-label="View ethanzhongch/Agent-Skills on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- ahmed3elshaer/everything-claude-code-mobile -->
-      <article class="card" data-category="kmp" data-repo="ahmed3elshaer/everything-claude-code-mobile" aria-label="ahmed3elshaer/everything-claude-code-mobile">
-        <div class="card-top">
-          <span class="badge badge-kmp">KMP / CMP</span>
-          <span class="star-count loading" id="stars-ahmed" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">ahmed3elshaer/everything-claude-code-mobile</p>
-        <p class="card-desc">KMP navigation: Voyager, Decompose, Compose Nav + SwiftUI bridges.</p>
-        <div class="tags">
-          <span class="tag">Navigation</span>
-          <span class="tag">Voyager</span>
-          <span class="tag">Decompose</span>
-          <span class="tag">SwiftUI</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/ahmed3elshaer/everything-claude-code-mobile" target="_blank" rel="noopener noreferrer" aria-label="View ahmed3elshaer/everything-claude-code-mobile on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- jeffallan/claude-skills -->
-      <article class="card" data-category="kmp" data-repo="jeffallan/claude-skills" aria-label="jeffallan/claude-skills">
-        <div class="card-top">
-          <span class="badge badge-kmp">KMP / CMP</span>
-          <span class="star-count loading" id="stars-jeffallan" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">jeffallan/claude-skills</p>
-        <p class="card-desc">Kotlin specialist — coroutines, Flow, KMP, Ktor, StateFlow/SharedFlow.</p>
-        <div class="tags">
-          <span class="tag">Coroutines</span>
-          <span class="tag">Flow</span>
-          <span class="tag">KMP</span>
-          <span class="tag">Ktor</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/jeffallan/claude-skills" target="_blank" rel="noopener noreferrer" aria-label="View jeffallan/claude-skills on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- ── Discovery Hubs ── -->
-      <!-- skillmatic-ai/awesome-agent-skills -->
-      <article class="card" data-category="hub" data-repo="skillmatic-ai/awesome-agent-skills" aria-label="skillmatic-ai/awesome-agent-skills">
-        <div class="card-top">
-          <span class="badge badge-hub">Hub</span>
-          <span class="star-count loading" id="stars-skillmatic" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">skillmatic-ai/awesome-agent-skills</p>
-        <p class="card-desc">Curated list of all agent skills, 44k+ indexed, security scanning.</p>
-        <div class="tags">
-          <span class="tag">Directory</span>
-          <span class="tag">Awesome list</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/skillmatic-ai/awesome-agent-skills" target="_blank" rel="noopener noreferrer" aria-label="View skillmatic-ai/awesome-agent-skills on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- heilcheng/awesome-agent-skills -->
-      <article class="card" data-category="hub" data-repo="heilcheng/awesome-agent-skills" aria-label="heilcheng/awesome-agent-skills">
-        <div class="card-top">
-          <span class="badge badge-hub">Hub</span>
-          <span class="star-count loading" id="stars-heilcheng" aria-label="GitHub stars">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            —
-          </span>
-        </div>
-        <p class="repo-name">heilcheng/awesome-agent-skills</p>
-        <p class="card-desc">Beginner-friendly awesome list with npx skills CLI and leaderboard.</p>
-        <div class="tags">
-          <span class="tag">Awesome list</span>
-          <span class="tag">CLI</span>
-        </div>
-        <div class="card-footer">
-          <a class="view-link" href="https://github.com/heilcheng/awesome-agent-skills" target="_blank" rel="noopener noreferrer" aria-label="View heilcheng/awesome-agent-skills on GitHub">
-            View on GitHub <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </article>
-
-
-
-    </div><!-- /grid-community -->
-  </section>
-
-</main>
-
-<!-- ─── FOOTER ─────────────────────────────────────────────────── -->
-<footer>
-  <div class="footer-inner">
-    <p class="footer-text">
-      Made with <span aria-label="love" style="color:#e05c5c;">♥</span> by
-      <a href="https://github.com/Rohit-554" target="_blank" rel="noopener noreferrer">Jadu</a>
-    </p>
-    <a
-      class="footer-text"
-      href="https://github.com/Rohit-554/Android-KMP-Skills-Hub"
-      target="_blank"
-      rel="noopener noreferrer"
-      style="display:inline-flex;align-items:center;gap:6px;"
-      aria-label="View source on GitHub"
-    >
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-      Rohit-554/Android-KMP-Skills-Hub
-    </a>
-  </div>
-</footer>
-
-<!-- ─── SCRIPT ──────────────────────────────────────────────────── -->
-<script>
-(function () {
-  'use strict';
-
-  /* ── State ──────────────────────────────────────────────────── */
-  let currentFilter = 'all';
-  let sortByStars   = false;
-
-  /* ── DOM refs ───────────────────────────────────────────────── */
-  const chips        = document.querySelectorAll('.chip');
-  const allCards     = Array.from(document.querySelectorAll('.card'));
-  const sortBtn      = document.getElementById('sort-stars-btn');
-  const secOfficial  = document.getElementById('section-official');
-  const secCommunity = document.getElementById('section-community');
-  const cntOfficial  = document.getElementById('count-official');
-  const cntCommunity = document.getElementById('count-community');
-  const gridOfficial  = document.getElementById('grid-official');
-  const gridCommunity = document.getElementById('grid-community');
-
-  /* ── Filter logic ───────────────────────────────────────────── */
-  function matchesFilter(card, filter) {
-    const cat = card.dataset.category;
-    if (filter === 'all')          return true;
-    if (filter === 'official')     return cat === 'official';
-    if (filter === 'architecture') return cat === 'architecture';
-    if (filter === 'compose')      return cat === 'compose';
-    // kmp filter also shows compose cards (Meet-Miyani is Compose+KMP)
-    if (filter === 'kmp')          return cat === 'kmp' || cat === 'compose';
-    if (filter === 'hub')          return cat === 'hub';
-    return false;
-  }
-
-  /* ── Star count formatting ──────────────────────────────────── */
-  function formatStars(n) {
-    if (n === null || n === undefined) return '?';
-    if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
-    return String(n);
-  }
-
-  /* ── Sort visible cards by stars within a grid ──────────────── */
-  function sortGrid(grid) {
-    const cards = Array.from(grid.children);
-    if (!sortByStars) return; // nothing to do, DOM order is the original order
-    cards.sort(function (a, b) {
-      const sa = parseInt(a.dataset.stars || '0', 10);
-      const sb = parseInt(b.dataset.stars || '0', 10);
-      return sb - sa; // descending
-    });
-    cards.forEach(function (c) { grid.appendChild(c); });
-  }
-
-  /* ── Apply current filter + sort ───────────────────────────── */
-  function applyState() {
-    let visOfficial  = 0;
-    let visCommunity = 0;
-
-    allCards.forEach(function (card) {
-      const isOfficial = card.dataset.category === 'official';
-      const visible    = matchesFilter(card, currentFilter);
-      card.classList.toggle('hidden', !visible);
-      if (visible) {
-        if (isOfficial) visOfficial++;
-        else            visCommunity++;
+      /* ── Filter logic ───────────────────────────────────────────── */
+      function matchesFilter(card, filter) {
+        const cat = card.dataset.category;
+        if (filter === 'all') return true;
+        if (filter === 'official') return cat === 'official';
+        if (filter === 'architecture') return cat === 'architecture';
+        if (filter === 'compose') return cat === 'compose';
+        // kmp filter also shows compose cards (Meet-Miyani is Compose+KMP)
+        if (filter === 'kmp') return cat === 'kmp' || cat === 'compose';
+        if (filter === 'hub') return cat === 'hub';
+        return false;
       }
-    });
 
-    // Official section: visible only when filter is 'all' or 'official'
-    const showOfficial  = visOfficial  > 0 && (currentFilter === 'all' || currentFilter === 'official');
-    const showCommunity = visCommunity > 0;
+      /* ── Star count formatting ──────────────────────────────────── */
+      function formatStars(n) {
+        if (n === null || n === undefined) return '?';
+        if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+        return String(n);
+      }
 
-    secOfficial .classList.toggle('hidden', !showOfficial);
-    secCommunity.classList.toggle('hidden', !showCommunity);
-    cntOfficial .textContent = visOfficial;
-    cntCommunity.textContent = visCommunity;
+      /* ── Sort visible cards by stars within a grid ──────────────── */
+      function sortGrid(grid) {
+        const cards = Array.from(grid.children);
+        if (!sortByStars) return; // nothing to do, DOM order is the original order
+        cards.sort(function (a, b) {
+          const sa = parseInt(a.dataset.stars || '0', 10);
+          const sb = parseInt(b.dataset.stars || '0', 10);
+          return sb - sa; // descending
+        });
+        cards.forEach(function (c) { grid.appendChild(c); });
+      }
 
-    // Sort within each grid (only reorders children, doesn't change visibility)
-    if (sortByStars) {
-      restoreOriginalOrder(gridOfficial);
-      restoreOriginalOrder(gridCommunity);
-      sortGrid(gridOfficial);
-      sortGrid(gridCommunity);
-    } else {
-      restoreOriginalOrder(gridOfficial);
-      restoreOriginalOrder(gridCommunity);
-    }
-  }
+      /* ── Apply current filter + sort ───────────────────────────── */
+      function applyState() {
+        let visOfficial = 0;
+        let visCommunity = 0;
 
-  /* ── Preserve & restore original DOM order ──────────────────── */
-  const originalOfficial  = Array.from(gridOfficial.children);
-  const originalCommunity = Array.from(gridCommunity.children);
+        allCards.forEach(function (card) {
+          const isOfficial = card.dataset.category === 'official';
+          const visible = matchesFilter(card, currentFilter);
+          card.classList.toggle('hidden', !visible);
+          if (visible) {
+            if (isOfficial) visOfficial++;
+            else visCommunity++;
+          }
+        });
 
-  function restoreOriginalOrder(grid) {
-    const originals = grid === gridOfficial ? originalOfficial : originalCommunity;
-    originals.forEach(function (c) { grid.appendChild(c); });
-  }
+        // Official section: visible only when filter is 'all' or 'official'
+        const showOfficial = visOfficial > 0 && (currentFilter === 'all' || currentFilter === 'official');
+        const showCommunity = visCommunity > 0;
 
-  /* ── Filter chips ───────────────────────────────────────────── */
-  chips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      chips.forEach(function (c) { c.classList.remove('active'); });
-      chip.classList.add('active');
-      currentFilter = chip.dataset.filter;
+        secOfficial.classList.toggle('hidden', !showOfficial);
+        secCommunity.classList.toggle('hidden', !showCommunity);
+        cntOfficial.textContent = visOfficial;
+        cntCommunity.textContent = visCommunity;
+
+        // Sort within each grid (only reorders children, doesn't change visibility)
+        if (sortByStars) {
+          restoreOriginalOrder(gridOfficial);
+          restoreOriginalOrder(gridCommunity);
+          sortGrid(gridOfficial);
+          sortGrid(gridCommunity);
+        } else {
+          restoreOriginalOrder(gridOfficial);
+          restoreOriginalOrder(gridCommunity);
+        }
+      }
+
+      /* ── Preserve & restore original DOM order ──────────────────── */
+      const originalOfficial = Array.from(gridOfficial.children);
+      const originalCommunity = Array.from(gridCommunity.children);
+
+      function restoreOriginalOrder(grid) {
+        const originals = grid === gridOfficial ? originalOfficial : originalCommunity;
+        originals.forEach(function (c) { grid.appendChild(c); });
+      }
+
+      /* ── Filter chips ───────────────────────────────────────────── */
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+          currentFilter = chip.dataset.filter;
+          applyState();
+        });
+      });
+
+      /* ── Sort button ────────────────────────────────────────────── */
+      sortBtn.addEventListener('click', function () {
+        sortByStars = !sortByStars;
+        sortBtn.classList.toggle('active', sortByStars);
+        sortBtn.setAttribute('aria-pressed', String(sortByStars));
+        sortBtn.textContent = ''; // rebuild contents
+        const starSpan = document.createElement('span');
+        starSpan.className = 'star-icon';
+        starSpan.textContent = '★';
+        starSpan.setAttribute('aria-hidden', 'true');
+        sortBtn.appendChild(starSpan);
+        sortBtn.appendChild(document.createTextNode(sortByStars ? ' Sorted by Stars' : ' Sort by Stars'));
+        applyState();
+      });
+
+      /* ── GitHub Stars fetch ─────────────────────────────────────── */
+      function updateStarEl(card, count) {
+        const el = card.querySelector('.star-count');
+        if (!el) return;
+        card.dataset.stars = String(count !== null ? count : 0);
+        el.classList.remove('loading');
+        el.classList.add('loaded');
+        // rebuild inner HTML: star svg + count
+        el.innerHTML =
+          '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' +
+          '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>' +
+          '</svg>' +
+          formatStars(count);
+        el.setAttribute('aria-label', (count !== null ? count : '?') + ' GitHub stars');
+        // If currently sorting, re-apply to update sort
+        if (sortByStars) applyState();
+      }
+
+      function fetchStars(card) {
+        const repo = card.dataset.repo;
+        if (!repo) return;
+        fetch('https://api.github.com/repos/' + repo, {
+          headers: { 'Accept': 'application/vnd.github+json' }
+        })
+          .then(function (r) {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+          })
+          .then(function (data) {
+            updateStarEl(card, data.stargazers_count);
+          })
+          .catch(function () {
+            updateStarEl(card, null);
+          });
+      }
+
+      // Stagger requests slightly to avoid GitHub API throttling
+      allCards.forEach(function (card, i) {
+        setTimeout(function () { fetchStars(card); }, i * 120);
+      });
+
+      // Initialise view
       applyState();
-    });
-  });
-
-  /* ── Sort button ────────────────────────────────────────────── */
-  sortBtn.addEventListener('click', function () {
-    sortByStars = !sortByStars;
-    sortBtn.classList.toggle('active', sortByStars);
-    sortBtn.setAttribute('aria-pressed', String(sortByStars));
-    sortBtn.textContent = ''; // rebuild contents
-    const starSpan = document.createElement('span');
-    starSpan.className   = 'star-icon';
-    starSpan.textContent = '★';
-    starSpan.setAttribute('aria-hidden', 'true');
-    sortBtn.appendChild(starSpan);
-    sortBtn.appendChild(document.createTextNode(sortByStars ? ' Sorted by Stars' : ' Sort by Stars'));
-    applyState();
-  });
-
-  /* ── GitHub Stars fetch ─────────────────────────────────────── */
-  function updateStarEl(card, count) {
-    const el = card.querySelector('.star-count');
-    if (!el) return;
-    card.dataset.stars = String(count !== null ? count : 0);
-    el.classList.remove('loading');
-    el.classList.add('loaded');
-    // rebuild inner HTML: star svg + count
-    el.innerHTML =
-      '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' +
-      '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>' +
-      '</svg>' +
-      formatStars(count);
-    el.setAttribute('aria-label', (count !== null ? count : '?') + ' GitHub stars');
-    // If currently sorting, re-apply to update sort
-    if (sortByStars) applyState();
-  }
-
-  function fetchStars(card) {
-    const repo = card.dataset.repo;
-    if (!repo) return;
-    fetch('https://api.github.com/repos/' + repo, {
-      headers: { 'Accept': 'application/vnd.github+json' }
-    })
-    .then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
-    .then(function (data) {
-      updateStarEl(card, data.stargazers_count);
-    })
-    .catch(function () {
-      updateStarEl(card, null);
-    });
-  }
-
-  // Stagger requests slightly to avoid GitHub API throttling
-  allCards.forEach(function (card, i) {
-    setTimeout(function () { fetchStars(card); }, i * 120);
-  });
-
-  // Initialise view
-  applyState();
-})();
-</script>
+    })();
+  </script>
 
 </body>
+
 </html>
