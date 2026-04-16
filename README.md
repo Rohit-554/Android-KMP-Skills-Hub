@@ -27,4 +27,4 @@ To add a repository, open a pull request with a new `<article class="card">` blo
 
 ## License
 
-MIT © [Jadu](https://github.com/Rohit-554)
+MIT
