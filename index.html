@@ -34,6 +34,7 @@
       --compose: #e05c5c;
       --kmp: #4fa3d4;
       --hub: #9b72cb;
+      --ktor: #00b4d8;
       --tag-bg: #27272a;
       --tag-text: #a1a1aa;
       --star-color: #e6a817;
@@ -412,6 +413,12 @@
       border: 1px solid color-mix(in srgb, var(--compose) 25%, transparent);
     }
 
+    .badge-ktor {
+      background: color-mix(in srgb, var(--ktor) 15%, transparent);
+      color: var(--ktor);
+      border: 1px solid color-mix(in srgb, var(--ktor) 30%, transparent);
+    }
+
     /* ─── REPO NAME ──────────────────────────────────────────── */
     .repo-name {
       font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
@@ -567,7 +574,7 @@
       </p>
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-num" id="total-count">19</span>
+          <span class="stat-num" id="total-count">24</span>
           <span>repositories</span>
         </div>
         <div class="stat">
@@ -577,6 +584,10 @@
         <div class="stat">
           <span class="stat-num">16</span>
           <span>community</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span>ktor</span>
         </div>
       </div>
     </section>
@@ -590,6 +601,7 @@
         <button class="chip" data-filter="compose" id="filter-compose">Compose / UI</button>
         <button class="chip" data-filter="kmp" id="filter-kmp">KMP / CMP</button>
         <button class="chip" data-filter="hub" id="filter-hub">Discovery Hubs</button>
+        <button class="chip" data-filter="ktor" id="filter-ktor">Ktor / Backend</button>
       </nav>
 
       <button class="sort-btn" id="sort-stars-btn" aria-pressed="false" title="Sort visible cards by star count">
@@ -1089,6 +1101,163 @@
       </div><!-- /grid-community -->
     </section>
 
+    <!-- ── KTOR / BACKEND SECTION ──────────────────────────────────── -->
+    <section class="section" id="section-ktor" aria-labelledby="section-ktor-title">
+      <div class="section-header">
+        <h2 class="section-title" id="section-ktor-title">Ktor / Backend</h2>
+        <div class="section-line" aria-hidden="true"></div>
+        <span class="section-count" id="count-ktor">5</span>
+      </div>
+      <div class="cards-grid" id="grid-ktor">
+
+        <!-- affaan-m/everything-claude-code -->
+        <article class="card" data-category="ktor" data-repo="affaan-m/everything-claude-code"
+          aria-label="affaan-m/everything-claude-code">
+          <div class="card-top">
+            <span class="badge badge-ktor">Ktor / Backend</span>
+            <span class="star-count loading" id="stars-affaan-ecc" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">affaan-m/everything-claude-code</p>
+          <p class="card-desc">Agent harness with a dedicated kotlin-ktor-patterns SKILL.md — routing DSL, JWT auth, Koin DI, CORS, StatusPages, WebSocket patterns.</p>
+          <div class="tags">
+            <span class="tag">Routing</span>
+            <span class="tag">JWT</span>
+            <span class="tag">Koin</span>
+            <span class="tag">WebSockets</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/affaan-m/everything-claude-code" target="_blank"
+              rel="noopener noreferrer" aria-label="View affaan-m/everything-claude-code on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- github/awesome-copilot -->
+        <article class="card" data-category="ktor" data-repo="github/awesome-copilot"
+          aria-label="github/awesome-copilot">
+          <div class="card-top">
+            <span class="badge badge-ktor">Ktor / Backend</span>
+            <span class="star-count loading" id="stars-github-copilot" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">github/awesome-copilot</p>
+          <p class="card-desc">GitHub's official skill collection includes kotlin-mcp-server-generator — Ktor Netty server, SSE transport, MCP server patterns with the Kotlin SDK.</p>
+          <div class="tags">
+            <span class="tag">MCP</span>
+            <span class="tag">Netty</span>
+            <span class="tag">SSE</span>
+            <span class="tag">Serialization</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/github/awesome-copilot" target="_blank"
+              rel="noopener noreferrer" aria-label="View github/awesome-copilot on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- jeffallan/claude-skills (Ktor networking focus) -->
+        <article class="card" data-category="ktor" data-repo="jeffallan/claude-skills"
+          aria-label="jeffallan/claude-skills">
+          <div class="card-top">
+            <span class="badge badge-ktor">Ktor / Backend</span>
+            <span class="star-count loading" id="stars-ktor-jeffallan" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">jeffallan/claude-skills</p>
+          <p class="card-desc">Kotlin specialist skill set with dedicated Ktor client and server patterns, coroutines, Flow, StateFlow and SharedFlow for reactive backends.</p>
+          <div class="tags">
+            <span class="tag">Ktor Client</span>
+            <span class="tag">Coroutines</span>
+            <span class="tag">Flow</span>
+            <span class="tag">KMP</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/jeffallan/claude-skills" target="_blank"
+              rel="noopener noreferrer" aria-label="View jeffallan/claude-skills on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Meet-Miyani/compose-skill (Ktor networking layer) -->
+        <article class="card" data-category="ktor" data-repo="Meet-Miyani/compose-skill"
+          aria-label="Meet-Miyani/compose-skill">
+          <div class="card-top">
+            <span class="badge badge-ktor">Ktor / Backend</span>
+            <span class="star-count loading" id="stars-ktor-meetmiyani" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">Meet-Miyani/compose-skill</p>
+          <p class="card-desc">Full-stack KMP skill with a complete Ktor-based networking layer — REST client, kotlinx.serialization, and Paging 3 integration for multiplatform apps.</p>
+          <div class="tags">
+            <span class="tag">Ktor Client</span>
+            <span class="tag">KMP</span>
+            <span class="tag">Serialization</span>
+            <span class="tag">Paging3</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/Meet-Miyani/compose-skill" target="_blank"
+              rel="noopener noreferrer" aria-label="View Meet-Miyani/compose-skill on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ethanzhongch/Agent-Skills (Ktor dependency init) -->
+        <article class="card" data-category="ktor" data-repo="ethanzhongch/Agent-Skills"
+          aria-label="ethanzhongch/Agent-Skills">
+          <div class="card-top">
+            <span class="badge badge-ktor">Ktor / Backend</span>
+            <span class="star-count loading" id="stars-ktor-ethan" aria-label="GitHub stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              —
+            </span>
+          </div>
+          <p class="repo-name">ethanzhongch/Agent-Skills</p>
+          <p class="card-desc">KMP Evolution Suite — Ktor dependency initialization, kotlinx.serialization setup, and MVI scaffolding for multiplatform backend projects.</p>
+          <div class="tags">
+            <span class="tag">Ktor</span>
+            <span class="tag">KMP</span>
+            <span class="tag">Koin</span>
+            <span class="tag">Setup</span>
+          </div>
+          <div class="card-footer">
+            <a class="view-link" href="https://github.com/ethanzhongch/Agent-Skills" target="_blank"
+              rel="noopener noreferrer" aria-label="View ethanzhongch/Agent-Skills on GitHub">
+              View on GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+      </div><!-- /grid-ktor -->
+    </section>
+
   </main>
 
   <!-- ─── FOOTER ─────────────────────────────────────────────────── -->
@@ -1125,10 +1294,13 @@
       const sortBtn = document.getElementById('sort-stars-btn');
       const secOfficial = document.getElementById('section-official');
       const secCommunity = document.getElementById('section-community');
+      const secKtor = document.getElementById('section-ktor');
       const cntOfficial = document.getElementById('count-official');
       const cntCommunity = document.getElementById('count-community');
+      const cntKtor = document.getElementById('count-ktor');
       const gridOfficial = document.getElementById('grid-official');
       const gridCommunity = document.getElementById('grid-community');
+      const gridKtor = document.getElementById('grid-ktor');
 
       /* ── Filter logic ───────────────────────────────────────────── */
       function matchesFilter(card, filter) {
@@ -1140,6 +1312,7 @@
         // kmp filter also shows compose cards (Meet-Miyani is Compose+KMP)
         if (filter === 'kmp') return cat === 'kmp' || cat === 'compose';
         if (filter === 'hub') return cat === 'hub';
+        if (filter === 'ktor') return cat === 'ktor';
         return false;
       }
 
@@ -1166,13 +1339,15 @@
       function applyState() {
         let visOfficial = 0;
         let visCommunity = 0;
+        let visKtor = 0;
 
         allCards.forEach(function (card) {
-          const isOfficial = card.dataset.category === 'official';
+          const cat = card.dataset.category;
           const visible = matchesFilter(card, currentFilter);
           card.classList.toggle('hidden', !visible);
           if (visible) {
-            if (isOfficial) visOfficial++;
+            if (cat === 'official') visOfficial++;
+            else if (cat === 'ktor') visKtor++;
             else visCommunity++;
           }
         });
@@ -1180,30 +1355,39 @@
         // Official section: visible only when filter is 'all' or 'official'
         const showOfficial = visOfficial > 0 && (currentFilter === 'all' || currentFilter === 'official');
         const showCommunity = visCommunity > 0;
+        const showKtor = visKtor > 0 && (currentFilter === 'all' || currentFilter === 'ktor');
 
         secOfficial.classList.toggle('hidden', !showOfficial);
         secCommunity.classList.toggle('hidden', !showCommunity);
+        secKtor.classList.toggle('hidden', !showKtor);
         cntOfficial.textContent = visOfficial;
         cntCommunity.textContent = visCommunity;
+        cntKtor.textContent = visKtor;
 
         // Sort within each grid (only reorders children, doesn't change visibility)
         if (sortByStars) {
           restoreOriginalOrder(gridOfficial);
           restoreOriginalOrder(gridCommunity);
+          restoreOriginalOrder(gridKtor);
           sortGrid(gridOfficial);
           sortGrid(gridCommunity);
+          sortGrid(gridKtor);
         } else {
           restoreOriginalOrder(gridOfficial);
           restoreOriginalOrder(gridCommunity);
+          restoreOriginalOrder(gridKtor);
         }
       }
 
       /* ── Preserve & restore original DOM order ──────────────────── */
       const originalOfficial = Array.from(gridOfficial.children);
       const originalCommunity = Array.from(gridCommunity.children);
+      const originalKtor = Array.from(gridKtor.children);
 
       function restoreOriginalOrder(grid) {
-        const originals = grid === gridOfficial ? originalOfficial : originalCommunity;
+        const originals = grid === gridOfficial ? originalOfficial
+                        : grid === gridCommunity ? originalCommunity
+                        : originalKtor;
         originals.forEach(function (c) { grid.appendChild(c); });
       }
 
