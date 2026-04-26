@@ -48,10 +48,11 @@ kimi       # Kimi
 cursor .   # Cursor / any AI-native IDE
 ```
 
-Then just prompt it — **explicitly invoking the skill so the agent reads it**:
-> *"/android-cli Build a Compose screen with a button that shows a Toast on click."*
+Then,
+- **Prompt:** *"/android-cli Create a todu phodu app that blow everyone's mind"*
 
-The agent handles the rest: context gathering, writing code, building, and deploying.
+If you have to test the screen,
+- **Test:** *"Test my app on the emulator"* — the agent spins up the emulator, installs the APK, and opens the app.
 
 ---
 
