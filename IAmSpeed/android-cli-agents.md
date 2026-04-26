@@ -36,8 +36,11 @@ Three components working together:
 android init                              # installs the android-cli skill into your agents globally
 
 mkdir MyApp && cd MyApp                  # create & navigate to your project directory
-android create --name="MyApp"            # scaffold a new Jetpack Compose project
-android skills add --all                 # install all official Android skills into the project
+android create --list                    # (optional) view all available project templates
+android create --name="MyApp"            # scaffold a new project (or add a template like empty-activity-xml)
+
+android skills list                      # (optional) see all official skills
+android skills add --all                 # install all official Android skills (or add specific: --skill navigation-3)
 ```
 
 Then launch your agent of choice inside the project folder:
@@ -55,6 +58,7 @@ If you have to test the screen,
 - **Test:** *"Test my app on the emulator"* — the agent spins up the emulator, installs the APK, and opens the app.
 
 ---
+
 
 ## Agentic Workflow
 
